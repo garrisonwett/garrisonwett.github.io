@@ -1,10 +1,228 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My GitHub Website</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <p>This is my very first website hosted on GitHub Pages.</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garrison Wettengel | Portfolio</title>
+    <style>
+        /* CSS Styles */
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: rgba(15, 23, 42, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #334155;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        header {
+            padding: 6rem 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent);
+            color: var(--bg-dark);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Main Content Grid */
+        .container {
+            padding: 2rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #334155;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #334155;
+            color: var(--text-muted);
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simplify for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Garrison <span>Wettengel</span></div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Aerospace Engineering & Control Systems</h1>
+        <p class="subtitle">M.S. Aerospace Engineering | Python & MATLAB Developer | Pilot in Training</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="section-title" id="about">Professional Overview</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Career Objective</h3>
+                <p>Driven by a long-term goal of executive leadership within the defense and aerospace sector (targeting organizations like Northrop Grumman or Lockheed Martin). Combining rigorous technical engineering background with strategic operational vision.</p>
+            </div>
+            <div class="card">
+                <h3>Aviation & Flight Dynamics</h3>
+                <p>Currently pursuing a Private Pilot License (PPL). Passionate about military aviation, flight dynamics, and the practical application of aerospace principles from the cockpit to the design board.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="research">Academic Research</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Master's Research Paper</h3>
+                <p><strong>Topic:</strong> Comparative Analysis of Control Systems.</p>
+                <p>Currently developing and evaluating a Genetic Algorithm (GA) optimized PID controller against a Fuzzy Logic controller. This research focuses on optimizing response times and stability in complex aerospace systems.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="projects">Technical Projects & Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Algorithm Development (MATLAB)</h3>
+                <p>Developing custom fuzzy inference systems and utilizing genetic algorithms for optimization tasks. Strong background in scripting compressible flow calculations and plotting complex dynamic models.</p>
+            </div>
+            <div class="card">
+                <h3>Python Programming</h3>
+                <p>Applying Python for data analysis, automation, and advanced mathematical modeling to support engineering research and hardware performance analysis.</p>
+            </div>
+            <div class="card">
+                <h3>Hardware & Systems</h3>
+                <p>Experience in custom PC builds, hardware troubleshooting, and understanding the physical architecture required to run heavy simulation environments.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2026 Garrison Wettengel. Hosted on GitHub Pages.</p>
+    </footer>
+
+</body>
 </html>
